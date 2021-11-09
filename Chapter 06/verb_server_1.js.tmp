@@ -1,0 +1,15 @@
+const h = require('http')
+const s = h.createServer((q, r) => {
+  switch(q.method) {
+    case 'GET':
+      r.end('GET invoked')
+      break;
+    case 'POST':
+      r.end('POST invoked')
+      break;
+    default:
+      r.end('default response!')
+      break;
+  }
+})
+s.listen(12000)

@@ -1,0 +1,45 @@
+Error
+    at AsyncHook.init (/Users/gireeshpunathil/Desktop/book/11/code/ah.js:6:46)
+    at emitInitNative (internal/async_hooks.js:144:43)
+    at emitInitScript (internal/async_hooks.js:350:3)
+    at initAsyncResource (internal/timers.js:153:5)
+    at new Timeout (internal/timers.js:186:3)
+    at setTimeout (timers.js:144:19)
+    at Object.<anonymous> (/Users/gireeshpunathil/Desktop/book/11/code/ah.js:12:1)
+    at Module._compile (internal/modules/cjs/loader.js:1185:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1205:10)
+    at Module.load (internal/modules/cjs/loader.js:1034:32)---------
+
+Error
+    at AsyncHook.init (/Users/gireeshpunathil/Desktop/book/11/code/ah.js:6:46)
+    at TTY.emitInitNative (internal/async_hooks.js:144:43)
+    at new WriteStream (tty.js:91:15)
+    at createWritableStdioStream (internal/bootstrap/switches/is_main_thread.js:43:16)
+    at process.getStdout [as stdout] (internal/bootstrap/switches/is_main_thread.js:118:12)
+    at Object.get (internal/console/constructor.js:167:38)
+    at Object.Console.<computed> (internal/console/constructor.js:289:46)
+    at Object.log (internal/console/constructor.js:300:61)
+    at Timeout._onTimeout (/Users/gireeshpunathil/Desktop/book/11/code/ah.js:13:11)
+    at listOnTimeout (internal/timers.js:549:17)---------
+Error
+    at AsyncHook.init (/Users/gireeshpunathil/Desktop/book/11/code/ah.js:6:46)
+    at Signal.emitInitNative (internal/async_hooks.js:144:43)
+    at process.startListeningIfSignal (internal/process/signal.js:25:18)
+    at process.emit (events.js:315:20)
+    at _addListener (events.js:358:14)
+    at process.addListener (events.js:406:10)
+    at process.getStdout [as stdout] (internal/bootstrap/switches/is_main_thread.js:123:13)
+    at Object.get (internal/console/constructor.js:167:38)
+    at Object.Console.<computed> (internal/console/constructor.js:289:46)
+    at Object.log (internal/console/constructor.js:300:61)---------
+Error
+    at AsyncHook.init (/Users/gireeshpunathil/Desktop/book/11/code/ah.js:6:46)
+    at emitInitNative (internal/async_hooks.js:144:43)
+    at emitInitScript (internal/async_hooks.js:350:3)
+    at process.nextTick (internal/process/task_queues.js:135:5)
+    at onwrite (_stream_writable.js:445:17)
+    at afterWriteDispatched (internal/stream_base_commons.js:157:5)
+    at writeGeneric (internal/stream_base_commons.js:145:3)
+    at WriteStream.Socket._writeGeneric (net.js:783:11)
+    at WriteStream.Socket._write (net.js:795:8)
+    at doWrite (_stream_writable.js:385:12)---------

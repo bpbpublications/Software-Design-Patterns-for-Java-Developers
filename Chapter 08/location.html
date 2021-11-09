@@ -1,0 +1,30 @@
+<html>
+<head>
+<style>
+table, th, td { border: 1px solid black; }
+</style>
+</head>
+<body>
+Welcome to foo's web site!
+<p>
+Your location details:
+<table>
+  <tr>
+    <th>Longitute</th>
+    <th>Latitude</th>
+  </tr>
+  <tr>
+    <td id="long">0</td>
+    <td id="lati">0</td>
+  </tr>
+</table>
+<script>
+var long = document.getElementById("long")
+var lati = document.getElementById("lati")
+  navigator.geolocation.getCurrentPosition((pos) => {
+  lati.innerHTML = Math.round(pos.coords.latitude * 100) / 100
+  long.innerHTML = Math.round(pos.coords.longitude * 100) / 100
+})
+</script>
+</body>
+</html>

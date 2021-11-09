@@ -1,0 +1,8 @@
+const h = require('http')
+const s = h.createServer((q, r) => {
+  if (q.url === '/bar') {
+    return r.end('response to XMLHttpRequest!')
+  }
+  r.end(require('fs').readFileSync(process.argv[2]))
+})
+s.listen(12000)

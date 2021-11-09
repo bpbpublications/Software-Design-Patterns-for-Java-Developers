@@ -1,0 +1,9 @@
+const h = require('http')
+const f = require('fs')
+const s = h.createServer((q, r) => {
+  const file = q.url.substring(1)
+  const data = f.readFileSync(file)
+  r.setHeader("Content-Type", 'application/zip')
+  r.end(data)
+})
+s.listen(12000)

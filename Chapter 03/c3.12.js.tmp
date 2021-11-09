@@ -1,0 +1,6 @@
+function handle(q, r) => {
+  if(q.url === 'foo') {
+    handleFoo(q, r)
+  }
+  // rest of the code
+}

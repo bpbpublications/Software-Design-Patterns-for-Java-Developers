@@ -1,0 +1,13 @@
+const h = require('http')
+const s = h.createServer((q, r) => {
+  console.log(q.headers)
+  r.end('hello')
+})
+s.maxHeadersCount = +process.argv[2]
+s.listen(12000, () => {
+  h.get('http://localhost:12000',
+    {headers: { a: 'b', c: 'd', e: 'f'}}, (m) => {
+    m.on('data', (d) => {console.log(d.toString())})
+    m.on('end', ()  => {s.close()})
+  })
+})

@@ -1,0 +1,34 @@
+// store the third argument into edx
+mov    edx,0xcccc
+// store the second argument into esi
+mov    esi,0xbbbb
+// store the first argument into edi
+mov    edi,0xaaaa
+// invoke the target method
+call   bar
+
+// store the current frame base pointer
+push   rbp
+// set the current stack pointer as the new frame base pointer
+mov    rbp,rsp
+// store first param into first slot of base pointer
+mov    DWORD PTR [rbp-0x4],edi
+// store second param into second slot of base pointer
+mov    DWORD PTR [rbp-0x8],esi
+// store third param into third slot of base pointer
+mov    DWORD PTR [rbp-0xc],edx
+// load first param into edx
+mov    edx,DWORD PTR [rbp-0x4]
+// load second param into eax
+mov    eax,DWORD PTR [rbp-0x8]
+// add eax and edx, store the result in edx
+add    edx,eax
+// load third param into eax
+mov    eax,DWORD PTR [rbp-0xc]
+// add eax and edx, store the result in eax
+add    eax,edx
+// unwind the frame, get the old base pointer back
+pop    rbp
+// return, leaving the result in eax
+ret    
+

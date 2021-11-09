@@ -1,0 +1,6 @@
+function handle(signal) {
+  interruptVector.forEach((e) => {
+    if (e.signal === signal)
+      e.handler(signal)
+  })
+}

@@ -1,0 +1,16 @@
+const h = require('http')
+const m = new Map()
+for (var i=0; i< 10; i++)
+  m.set(i, Math.round(Math.random() * 100))
+const s = h.createServer((q, r) => {
+let data = ''
+for(var i = 0; i < 10; i++)
+  data += `<tr><td> ${i} </td><td> ${m.get(i)} </td></tr>`
+ const html = '<html><body>' + 
+              '<table><tr>' + 
+              '<th> key </th>' +
+              '<th> value</th></tr>' + data + 
+              '</table></html>'
+  r.end(html)
+})
+s.listen(12000)

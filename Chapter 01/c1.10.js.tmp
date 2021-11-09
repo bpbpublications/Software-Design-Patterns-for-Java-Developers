@@ -1,0 +1,12 @@
+setInterval(() => {
+  cpus.forEach((c) => {
+    c.running.process.runTime += 10
+    c.running.process.state = 'runnable'
+    c.runnable.push(c.running.process)
+    const newProcess = c.runnable.shift()
+    c.running.push(newProcess)
+    c.running.process = newProcess
+    c.running.process.state = 'running'
+  })
+}, 10)
+    

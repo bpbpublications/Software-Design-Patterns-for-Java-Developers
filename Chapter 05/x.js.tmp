@@ -1,0 +1,9 @@
+const n = require('net')
+const s = n.createServer((s) => {
+  s.on('data', (d) => {
+    console.log(d.toString())
+  })
+  // s.end('hello world!')
+})
+s.listen(12000)
+

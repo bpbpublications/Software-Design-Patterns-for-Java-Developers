@@ -1,0 +1,5 @@
+// producer logic
+producer.send(data, topic, callback)
+
+// consumer logic
+consumer.subscribe(topic, callback)

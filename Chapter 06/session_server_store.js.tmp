@@ -1,0 +1,18 @@
+const h = require('http')
+const cr = require('crypto')
+const s = h.createServer((q, r) => {
+  const sd = q.headers['cookie']
+  if (sd === undefined) {
+    const hash = cr.createHash('md4')
+    const sk = hash.digest('hex').substring(0, 10)
+    const sv = 'my session data'
+    // store this session to a central store
+    r.setHeader('set-cookie', [ `${sk}=${sv}`])
+    r.end('cookie sent')
+  } else {
+    const k = sd.split('=')[0]
+    // load the session from the central store
+    r.end(`session: ${session}`)
+  }
+})
+s.listen(12000)

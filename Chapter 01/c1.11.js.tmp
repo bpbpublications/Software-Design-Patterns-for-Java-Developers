@@ -1,0 +1,9 @@
+function foo() {
+  return 10
+}
+
+function bar(fn) {
+  return fn() + 10
+}
+
+bar(foo)

@@ -1,0 +1,15 @@
+const h = require('http')
+const s = h.createServer((q, r) => {
+  switch(q.url) {
+    case '/foo':
+      r.end('foo path invoked')
+      break;
+    case '/bar':
+      r.end('bar path invoked')
+      break;
+    default:
+      r.end('default response!')
+      break;
+  }
+})
+s.listen(12000)

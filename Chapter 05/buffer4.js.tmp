@@ -1,0 +1,2 @@
+const b = Buffer.from('node')
+console.log(b)

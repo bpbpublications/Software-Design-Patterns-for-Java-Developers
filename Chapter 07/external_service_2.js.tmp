@@ -1,0 +1,24 @@
+const h = require('http')
+const s = h.createServer((q, r) => {
+  const gateway = require('mypayment_gaetway)
+  gateway.key = '024acd67de99f'
+  gateway.username = 'user'
+  gateway.password = 'password'
+  gateway.card = '1234 5678 9010 1112'
+  gateway.cvv = '123'
+  gateway.user = 'foo'
+  gateway.expiry = '1230'
+  gateway.comment = 'book purchase'
+  gateway.amount = 2000
+  gateway.currency = 'INR'
+  gateway.toaccount = '987 654 3210'
+  gateway.uniqueid = 'a4df90bdbbc'
+  gateway.pay(() => (e, s) => {
+    if (e != null) {
+      return r.end(`error making payment: ${e}`)
+    } else {
+      r.end(data.toString())
+    }
+  })
+})
+s.listen(12000)

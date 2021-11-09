@@ -1,0 +1,34 @@
+​document
+HTMLDocument http://localhost:12000/
+​URL: "http://localhost:12000/"
+​activeElement: <body>
+​​all: HTMLAllCollection { 0: html, 1: head, 2: body, … }
+​baseURI: "http://localhost:12000/"
+​body: <body>
+​characterSet: "windows-1252"
+​charset: "windows-1252"
+​childElementCount: 1​
+childNodes: NodeList [ html ]
+​children: HTMLCollection { 0: html, length: 1 }
+​compatMode: "BackCompat"
+​contentType: "text/html"
+​defaultView: Window http://localhost:12000/
+​designMode: "off"
+​documentElement: <html>
+​documentURI: "http://localhost:12000/"
+​domain: "localhost"
+​embeds: HTMLCollection { length: 0 }
+​firstChild: <html>​
+firstElementChild: <html>​
+fonts: FontFaceSet { size: 0, onloading: null, status: "loaded", … }
+​forms: HTMLCollection { length: 0 }
+head: <head>
+isConnected: true
+lastChild: <html>​
+lastElementChild: <html>
+lastModified: "04/05/2021 10:42:29"
+location: Location http://localhost:12000/
+nodeType: 9
+visibilityState: "visible"
+<get location()>: function location()
+<set location()>: function location()

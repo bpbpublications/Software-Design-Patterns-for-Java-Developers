@@ -1,0 +1,2 @@
+const b = Buffer.alloc(4, 'ABCD')
+console.log(b)

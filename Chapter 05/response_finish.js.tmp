@@ -1,0 +1,12 @@
+const h = require('http')
+const s = h.createServer((q, r) => {
+  r.on('finish', () => {
+    console.log('response finished')
+  })
+  r.end('hello')
+}).listen(12000, () => {
+  h.get('http://localhost:12000', (m) => {
+    m.on('data', (d) => {})
+    m.on('end', () => { s.close() })
+  })
+})

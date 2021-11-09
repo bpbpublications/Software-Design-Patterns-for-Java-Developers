@@ -1,0 +1,12 @@
+var express = require('express')
+var bodyParser = require('body-parser')
+var app = express()
+app.use(bodyParser.urlencoded({ extended: true }))
+app.get('/', (q, r) => {
+  r.end(require('fs').readFileSync(process.argv[2]))
+})
+app.post('/', (q, r) => {
+   console.log(q.body)
+   r.end(`performing search with range: ${q.body.range} and query: ${q.body.q}`)
+})
+app.listen(12000)

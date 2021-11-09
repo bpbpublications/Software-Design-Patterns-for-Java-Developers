@@ -1,0 +1,10 @@
+const h = require('http');
+
+const c = [ 'sessionkey=fd0ea63; \
+            expires=Sun, 1-Jan-2100 12:00:00 GMT' ]
+const s = h.createServer((q, r) => {
+  console.log(q.headers['cookie'])
+  r.setHeader('set-cookie', c)
+  r.end('cookie sent')
+})
+s.listen(12000)

@@ -1,0 +1,15 @@
+const h = require('http')
+const s = h.createServer((q, r) => {
+  if (q.url === '/foo') {
+    let data = ''
+    h.get('http://www.google.com', (m) => {
+      m.on('data', (d) => {
+        data += d
+      })
+      m.on('end', () => {
+        r.end(data)
+      })
+    })
+  }
+})
+s.listen(12000)

@@ -1,0 +1,5 @@
+const f = require('fs')
+const r = f.createReadStream(__filename)
+r.on('data', (d) => {
+  console.log(d)
+})

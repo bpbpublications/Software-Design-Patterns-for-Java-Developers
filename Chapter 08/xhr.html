@@ -1,0 +1,24 @@
+<html>
+<body>
+<p>
+<div id='xhr'>
+<button type='button' onclick='XHR()'>XHR</button>
+</div>
+<div id='non-xhr'>
+I am a building, in the city of London, very tall, very old, and extremely famous. One of the most important things about me, is its very large domed roof.
+</div>
+<script>
+function XHR() {
+  const x = new XMLHttpRequest()
+  x.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById('xhr').innerHTML = this.responseText
+    }
+  }
+  x.open('GET', '/bar', true)
+  x.send()
+}
+</script>
+</body>
+</html>
+

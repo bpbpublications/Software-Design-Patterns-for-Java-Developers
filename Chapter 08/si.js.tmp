@@ -1,0 +1,10 @@
+const h = require('http')
+const f = require('fs')
+const s = h.createServer((q, r) => {
+  if (q.url === '/') {
+    return r.end(require('fs').readFileSync(process.argv[2]))
+  } else {
+    return r.end(f.readFileSync('.' + q.url))
+  }
+})
+s.listen(12000)

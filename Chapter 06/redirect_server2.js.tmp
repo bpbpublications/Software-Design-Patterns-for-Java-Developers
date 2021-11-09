@@ -1,0 +1,7 @@
+const h = require('http')
+const s = h.createServer((q, r) => {
+  if (q.url === '/foo') {
+    r.end('this site has moved.')
+  }
+})
+s.listen(12000)

@@ -1,0 +1,15 @@
+<html>
+<body>
+<input id="ws" type="text"></input>
+<script>
+const ws = new WebSocket('ws://localhost:12000')
+ws.onopen = function() {
+  alert('connecting')
+    ws.send('hello')
+}
+ws.onmessage = function(e) {
+ document.getElementById('ws').value = e.data
+}
+</script>
+</body>
+</html>

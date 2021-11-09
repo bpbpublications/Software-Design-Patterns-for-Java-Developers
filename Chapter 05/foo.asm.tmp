@@ -1,0 +1,9 @@
+// store the third argument into edx
+mov    edx,0xcccc
+// store the second argument into esi
+mov    esi,0xbbbb
+// store the first argument into edi
+mov    edi,0xaaaa
+// invoke the target method
+call   bar
+

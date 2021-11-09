@@ -1,0 +1,9 @@
+const f = require('fs')
+console.log('the file content is:\n-----')
+const r = f.createReadStream(__filename)
+r.on('data', (d) => {
+  console.log(d.toString())
+})
+r.on('end', () => {
+  console.log('-----\nend of file')
+})

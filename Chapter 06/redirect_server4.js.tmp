@@ -1,0 +1,9 @@
+const h = require('http')
+const s = h.createServer((q, r) => {
+  if (q.url === '/foo') {
+    r.statusCode = 302;
+    r.setHeader('Location', 'http://www.google.com')
+    r.end()
+  }
+})
+s.listen(12000)

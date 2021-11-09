@@ -1,0 +1,5 @@
+const h = require('http')
+const s = h.createServer((q, r) => {
+  r.end(require('fs').readFileSync(process.argv[2]))
+})
+s.listen(12000)

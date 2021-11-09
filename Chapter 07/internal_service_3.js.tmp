@@ -1,0 +1,16 @@
+const h = require('http')
+const s = h.createServer((q, r) => {
+  h.get('http://localhost:13000/myservice', () => {
+    const data = '';
+    m.on('data', (d) => {
+      data += d
+    })
+    m.on('end', () => {
+      r.end(data.toString())
+    })
+    m.on('error', (e) => {
+      r.end(`internal server error: ${e}`)
+    })
+  })
+})
+s.listen(12000)
