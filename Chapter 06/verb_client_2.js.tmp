@@ -1,8 +1,0 @@
-const h = require('http')
-
-const r = h.request({port: 12000, method: 'POST'}, (m) => {
-  m.on('data', (d) => {
-    console.log(d.toString())
-  })
-})
-r.end();

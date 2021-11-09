@@ -1,6 +1,0 @@
-function foo() {
-  return 10
-}
-
-const bar = foo
-foo = 10

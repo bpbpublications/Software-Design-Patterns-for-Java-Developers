@@ -1,2 +1,0 @@
-const b = Buffer.from([0x0a, 0x0b])
-console.log(b.readInt16BE(0))

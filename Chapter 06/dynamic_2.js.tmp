@@ -1,5 +1,0 @@
-const h = require('http')
-const s = h.createServer((q, r) => {
-  r.end(`<html><body>hello ${q.url.split('=')[1]}!</html>`)
-})
-s.listen(12000)

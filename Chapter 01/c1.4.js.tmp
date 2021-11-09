@@ -1,5 +1,0 @@
-const h = require('http')
-h.createServer((q, r) => {
-  r.end('hello world!')
-}).listen(12000)
-

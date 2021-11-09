@@ -1,2 +1,0 @@
-const c = require('crypto')
-c.createCipher('AECS-256-FOO', 'foo')

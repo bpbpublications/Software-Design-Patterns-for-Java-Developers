@@ -1,4 +1,0 @@
-const h = require('http')
-const r = h.get('http://localhost:12000', (m) => {
-  console.log(m.headers['set-cookie'])
-})

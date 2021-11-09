@@ -1,5 +1,0 @@
-const h = require('http')
-const s = h.createServer((q, r) => {
-  r.end(new Date().toUTCString())
-})
-s.listen(12000)

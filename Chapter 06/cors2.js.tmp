@@ -1,5 +1,0 @@
-
-const h = require('http')
-h.request({method: 'OPTIONS', host: 'www.google.com'}, (m) => {
-  console.log(m.headers)
-}).end()

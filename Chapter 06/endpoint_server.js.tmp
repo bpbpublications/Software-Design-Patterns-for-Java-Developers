@@ -1,5 +1,0 @@
-const h = require('http')
-const s = h.createServer((q, r) => {
-  r.end(`${q.method} http://localhost:12000${q.url}`)
-})
-s.listen(12000)

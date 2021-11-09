@@ -1,7 +1,0 @@
-const n = require('net')
-const c = n.createConnection({ port: 12000 })
-console.log(c.constructor.name)
-c.on('data', (d) => {
-  console.log(d.toString())
-  c.end()
-})

@@ -1,4 +1,0 @@
-function customLogger(q, r, n) => {
-  logger.log(q.query.name)
-  n(q, r)
-}

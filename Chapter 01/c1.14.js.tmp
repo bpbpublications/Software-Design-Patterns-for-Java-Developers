@@ -1,9 +1,0 @@
-function outer(op) {
-  let ol = 1
-  function inner(ip) {
-  let il = 2
-    // access to ip and il as always
-    // access to op an ol even after outer exits
-  }
-  return inner
-}

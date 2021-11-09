@@ -1,9 +1,0 @@
-const h = require('http')
-const f = require('fs')
-const cr = '/var/www/website1/public'
-const s = h.createServer((q, r) => {
-  const file = cr + q.url
-  const data = f.readFileSync(file)
-  r.end(data)
-})
-s.listen(12000)

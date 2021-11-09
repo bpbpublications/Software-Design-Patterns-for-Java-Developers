@@ -1,6 +1,0 @@
-function pause() {
-  video.stream.pause()
-  audio.stream.pause()
-  if (buf.length === MAX)
-    downloader.pause()
-}
